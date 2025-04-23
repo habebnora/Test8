@@ -58,28 +58,27 @@
     <p>العنوان: القاهرة، مصر | الهاتف: 01012345678 | البريد: info@greengo.com</p>
   </div>
 
-  <script>
-    const form = document.getElementById('recycleForm');
-    const successOverlay = document.getElementById('successOverlay');
+<script>
+  const form = document.getElementById('recycleForm');
+  const successOverlay = document.getElementById('successOverlay');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  console.log("Form submitted"); // هذا للتأكد
-  const formData = new FormData(form);
-  fetch(form.action, {
-    method: 'POST',
-    body: formData,
-    mode: 'no-cors'
-  }).then(() => {
-    form.reset();
-    overlay.style.display = 'flex';
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 3000);
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log("Form submitted");
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(() => {
+      form.reset();
+      successOverlay.style.display = 'flex';
+      setTimeout(() => {
+        successOverlay.style.display = 'none';
+      }, 3000);
+    });
   });
-});
-
-  </script>
+</script>
 
 </body>
 </html>
