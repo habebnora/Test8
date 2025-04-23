@@ -1,0 +1,23 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #ffffff;
+  }
+  .navbar {
+    background-color: #2e7d32;
+  }
+  .navbar-brand,
+  .nav-link,
+  .footer {
+    color: white !important;
+  }
+  .footer {
+    background-color: #2e7d32;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  .price-table td,
+  .price-table th {
+    padding: 10px;
+  }
+  
