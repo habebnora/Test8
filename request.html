@@ -59,17 +59,18 @@
   <script>
     const form = document.getElementById('recycleForm');
     const thankYou = document.getElementById('thankYouMessage');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      }).then(() => {
-        form.reset();
-        thankYou.classList.remove('d-none');
-      });
-    });
+form.addEventListener('submit', function (e) {
+   e.preventDefault();
+   const formData = new FormData(form);
+   fetch(form.action, {
+     method: 'POST',
+     body: formData,
+     mode: 'no-cors',  // إضافة هذا السطر لتخطي CORS
+   }).then(() => {
+     form.reset();
+     thankYou.classList.remove('d-none');
+   });
+ });
   </script>
 </body>
 </html>
